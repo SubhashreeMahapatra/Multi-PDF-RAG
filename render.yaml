@@ -1,0 +1,31 @@
+services:
+  # Backend API on Render (Free Tier)
+  - type: web
+    name: pdf-rag-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    plan: free
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false          # Set manually in Render dashboard
+      - key: SECRET_KEY
+        generateValue: true  # Auto-generated
+      - key: DATABASE_URL
+        fromDatabase:
+          name: pdf-rag-db
+          property: connectionString
+      - key: CHROMA_PERSIST_DIR
+        value: /tmp/chroma_db
+      - key: UPLOAD_DIR
+        value: /tmp/uploads
+      - key: DEBUG
+        value: false
+
+  # PostgreSQL Database (Free 90 days on Render)
+databases:
+  - name: pdf-rag-db
+    plan: free
+    databaseName: ragdb
+    user: raguser

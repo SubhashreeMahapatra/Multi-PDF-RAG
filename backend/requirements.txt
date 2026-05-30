@@ -1,0 +1,34 @@
+# FastAPI & Server
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+python-multipart==0.0.9
+httpx==0.27.0
+
+# Database
+sqlalchemy==2.0.30
+aiosqlite==0.20.0
+
+# LangChain & AI (Gemini - FREE)
+langchain==0.2.5
+langchain-google-genai==1.0.6
+langchain-community==0.2.5
+langchain-chroma==0.1.1
+google-generativeai==0.7.2
+
+# Vector Store (local, no cost)
+chromadb==0.5.3
+
+# PDF Processing
+pymupdf==1.24.5
+pypdf==4.2.0
+
+# Utilities
+python-dotenv==1.0.1
+pydantic==2.7.4
+pydantic-settings==2.3.3
+aiofiles==23.2.1
+tenacity==8.3.0
+
+# Testing
+pytest==8.2.2
+pytest-asyncio==0.23.7
