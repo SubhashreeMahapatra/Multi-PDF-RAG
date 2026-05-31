@@ -1,20 +1,19 @@
 # 📚 Multi-PDF RAG Chat System
-### 100% FREE — No credit card, no paid API
 
 Chat with your PDF documents using Google Gemini AI — completely free.
 
-## 🆓 Why It's Free
 
-| Component | Service | Cost |
-|-----------|---------|------|
-| LLM (chat) | Google Gemini 2.0 Flash | **FREE** (1,500 req/day) |
-| Embeddings | Google text-embedding-004 | **FREE** |
-| Vector DB | ChromaDB (local) | **FREE** (runs on your machine) |
-| Database | SQLite (local) | **FREE** |
-| Backend hosting | Render.com free tier | **FREE** |
-| Frontend hosting | Vercel free tier | **FREE** |
 
-**Total cost: $0/month** ✅
+| Component | Service |
+|-----------|---------|
+| LLM (chat) | Google Gemini 2.0 Flash | 
+| Embeddings | Google text-embedding-004 |
+| Vector DB | ChromaDB (local) |
+| Database | SQLite (local) |
+| Backend hosting | Render.com free tier |
+| Frontend hosting | Vercel free tier |
+
+
 
 ---
 
@@ -47,14 +46,7 @@ User → React Frontend → FastAPI Backend
 
 ## 🚀 Quick Start (5 minutes)
 
-### Step 1 — Get your FREE Google API Key
-
-1. Go to **https://aistudio.google.com/apikey**
-2. Sign in with your Google account
-3. Click **"Create API key"**
-4. Copy the key — that's it! No credit card needed.
-
-### Step 2 — Run the project
+###  Run the project
 
 ```bash
 # Clone your repo
@@ -88,31 +80,6 @@ Visit **http://localhost:5173** 🎉
 API docs at **http://localhost:8000/docs**
 
 ---
-
-## ☁️ Free Hosting Guide
-
-### Backend → Render.com (Free)
-
-1. Push to GitHub
-2. Go to [render.com](https://render.com) → **New Web Service**
-3. Connect your GitHub repo
-4. Settings:
-   - Root Directory: `backend`
-   - Build Command: `pip install -r requirements.txt`
-   - Start Command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-5. Environment Variables:
-   - `GOOGLE_API_KEY` = your free Gemini key
-   - `SECRET_KEY` = any random string
-   - `DATABASE_URL` = (leave as sqlite for free, or add Render Postgres)
-6. Click **Deploy** ✅
-
-### Frontend → Vercel (Free)
-
-1. Go to [vercel.com](https://vercel.com) → **New Project**
-2. Import your GitHub repo
-3. Root Directory: `frontend`
-4. Environment Variable: `VITE_API_URL` = `https://your-app.onrender.com`
-5. Click **Deploy** ✅
 
 ---
 
@@ -158,16 +125,7 @@ multi-pdf-rag/
 | `SECRET_KEY` | Random secret string | Run: `python -c "import secrets; print(secrets.token_hex(32))"` |
 | `DATABASE_URL` | DB connection | Default: SQLite (no setup needed) |
 
----
 
-## 📊 Free Tier Limits (Gemini)
-
-| Model | Requests/day | Tokens/min |
-|-------|-------------|------------|
-| gemini-2.0-flash | 1,500 | 1,000,000 |
-| text-embedding-004 | generous | very high |
-
-More than enough for personal projects and portfolios!
 
 ---
 
