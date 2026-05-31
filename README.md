@@ -1,6 +1,6 @@
 # 📚 Multi-PDF RAG Chat System
 
-Chat with your PDF documents using Google Gemini AI — completely free.
+Chat with your PDF documents using Google Gemini AI.
 
 
 
@@ -10,8 +10,8 @@ Chat with your PDF documents using Google Gemini AI — completely free.
 | Embeddings | Google text-embedding-004 |
 | Vector DB | ChromaDB (local) |
 | Database | SQLite (local) |
-| Backend hosting | Render.com free tier |
-| Frontend hosting | Vercel free tier |
+| Backend hosting | Render.com |
+| Frontend hosting | Vercel |
 
 
 
